@@ -159,14 +159,26 @@ Convierte la planificación a JSON con esta estructura:
 
 2. Verifica si `generate_docx.py` existe en el directorio actual. Si no, cópialo desde `~/.claude/skills/planificacion-profesor/generate_docx.py`.
 
-3. Verifica si `python-docx` está instalado:
+3. Detecta el sistema operativo y el comando Python correcto:
+   - En **Mac/Linux**: usa `python3` y `pip3`
+   - En **Windows**: usa `python` y `pip`
+
+   Verifica si `python-docx` está instalado ejecutando según el SO:
    ```bash
+   # Mac/Linux:
    python3 -c "import docx" 2>/dev/null || pip3 install python-docx --user -q || pip3 install python-docx --break-system-packages -q
+
+   # Windows:
+   python -c "import docx" 2>nul || pip install python-docx --user -q
    ```
 
-4. Ejecuta:
+4. Ejecuta según el SO:
    ```bash
+   # Mac/Linux:
    python3 generate_docx.py --input planificacion_SEMANA.json --output planificacion_SEMANA.docx
+
+   # Windows:
+   python generate_docx.py --input planificacion_SEMANA.json --output planificacion_SEMANA.docx
    ```
 
 5. Confirma al usuario que el archivo quedó en el directorio actual y listo para abrir en Word.

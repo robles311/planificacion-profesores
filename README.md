@@ -15,9 +15,9 @@ Creado por [@sebarobles](https://github.com/robles311)
 
 ## Requisitos
 
-- [Claude Code](https://claude.ai/code) instalado
+- [Claude Code](https://claude.ai/code) instalado (Mac y Windows)
 - Suscripción **Claude Pro** (no necesita API key separada)
-- Python 3 instalado en tu Mac
+- Python 3 instalado ([Mac](https://www.python.org/downloads/) · [Windows](https://www.python.org/downloads/windows/))
 
 ## Instalación
 
