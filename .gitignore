@@ -1,0 +1,6 @@
+mi-contexto.md
+*.docx
+*.json
+__pycache__/
+*.pyc
+.DS_Store
